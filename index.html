@@ -3,227 +3,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBSE Class 12th Results 2025</title>
+    <title>CBSE Class 12 Result 2025</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
             background-color: #f5f5f5;
             color: #333;
+            line-height: 1.6;
         }
+        
         .container {
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 900px;
+            margin: 0 auto;
             padding: 20px;
             background-color: white;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 5px;
         }
-        .header {
+        
+        header {
             text-align: center;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+            border-bottom: 2px solid #0066cc;
         }
-        .header img {
-            height: 80px;
+        
+        h1 {
+            color: #0066cc;
+            font-size: 28px;
+            margin-bottom: 10px;
         }
-        .header h1 {
-            color: #1a5276;
-            margin: 10px 0 5px;
+        
+        h2 {
+            color: #0066cc;
+            font-size: 22px;
+            margin: 15px 0;
         }
-        .header p {
-            color: #666;
-            margin: 0;
+        
+        h3 {
+            color: #0066cc;
+            font-size: 18px;
+            margin: 10px 0;
         }
+        
+        .live-badge {
+            display: inline-block;
+            background-color: red;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
         .form-container {
             background-color: #f9f9f9;
             padding: 20px;
             border-radius: 5px;
-            margin-bottom: 30px;
+            margin: 20px 0;
         }
+        
         .form-group {
             margin-bottom: 15px;
         }
+        
         label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
         }
+        
         input[type="text"] {
             width: 100%;
-            padding: 10px;
+            padding: 8px;
             border: 1px solid #ddd;
             border-radius: 4px;
-            font-size: 16px;
         }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
         button {
-            background-color: #1a5276;
-            color: white;
+            padding: 8px 20px;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
             border-radius: 4px;
             cursor: pointer;
-            margin-top: 10px;
+            font-weight: bold;
         }
-        button:hover {
-            background-color: #154360;
+        
+        .submit-btn {
+            background-color: #0066cc;
+            color: white;
         }
+        
+        .reset-btn {
+            background-color: #ccc;
+            color: #333;
+        }
+        
+        .disclaimer {
+            font-size: 12px;
+            color: #666;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-left: 3px solid #0066cc;
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 30px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+        }
+        
         .result-container {
             display: none;
             margin-top: 30px;
         }
-        .student-info {
-            background-color: #eaf2f8;
-            padding: 15px;
-            border-radius: 5px;
+        
+        .result-header {
+            text-align: center;
             margin-bottom: 20px;
         }
-        .marks-table {
+        
+        .student-info {
+            margin-bottom: 20px;
+        }
+        
+        .student-info p {
+            margin-bottom: 5px;
+        }
+        
+        table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin: 20px 0;
         }
-        .marks-table th, .marks-table td {
+        
+        th, td {
             border: 1px solid #ddd;
-            padding: 12px;
+            padding: 8px;
             text-align: left;
         }
-        .marks-table th {
-            background-color: #1a5276;
-            color: white;
-        }
-        .marks-table tr:nth-child(even) {
+        
+        th {
             background-color: #f2f2f2;
         }
-        .summary {
-            margin-top: 20px;
+        
+        .result-status {
             font-weight: bold;
+            font-size: 18px;
+            margin: 20px 0;
+            color: green;
         }
-        .error {
-            color: red;
-            margin-top: 10px;
-            display: none;
-        }
-        @media print {
-            button, .form-container {
-                display: none;
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
             }
-            .result-container {
-                display: block !important;
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            button {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <img src="https://upload.wikimedia.org/wikipedia/en/4/4d/CBSE_logo.svg" alt="CBSE Logo">
+        <header>
             <h1>Central Board of Secondary Education</h1>
-            <p>Senior School Certificate Examination (Class XII) Results 2025</p>
-        </div>
-
+            <h2>Examination Results 2025</h2>
+            <h3>CBSE 12th Result OUT</h3>
+            <p><strong>Brought to you by National Informatics Centre</strong></p>
+        </header>
+        
         <div class="form-container">
-            <h2>Enter Your Details</h2>
-            <form id="resultForm">
-                <div class="form-group">
-                    <label for="applicationNo">Application Number</label>
-                    <input type="text" id="applicationNo" placeholder="Enter your application number" required>
-                </div>
-                <div class="form-group">
-                    <label for="dob">Date of Birth (DD/MM/YYYY)</label>
-                    <input type="text" id="dob" placeholder="Enter your date of birth" required>
-                </div>
-                <button type="submit">View Result</button>
-            </form>
-            <div id="error" class="error">Invalid application number or date of birth. Please try again.</div>
-        </div>
-
-        <div id="resultContainer" class="result-container">
-            <div class="student-info">
-                <h2>Student Information</h2>
-                <p><strong>Name:</strong> <span id="studentName">Prince</span></p>
-                <p><strong>Name:</strong> <span id="fatherName">Anojkumar</span></p>
-                <p><strong>Application Number:</strong> <span id="displayAppNo"></span></p>
-                <p><strong>Date of Birth:</strong> <span id="displayDob"></span></p>
+            <div class="live-badge">LIVE</div>
+            <h3>Senior School Examination (Class XII) 2025</h3>
+            
+            <div class="form-group">
+                <label for="rollNumber">Enter your Roll Number</label>
+                <input type="text" id="rollNumber" placeholder="Roll Number">
             </div>
-
-            <h2>Subject-wise Marks</h2>
-            <table class="marks-table">
+            
+            <div class="form-group">
+                <label for="schoolNumber">Enter School No.</label>
+                <input type="text" id="schoolNumber" placeholder="School Number">
+            </div>
+            
+            <div class="form-group">
+                <label for="dob">Enter Date of Birth</label>
+                <input type="text" id="dob" placeholder="dd/mm/yyyy">
+                <small>(Type DOB in dd/mm/yyyy)</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="admitCardId">Enter Admit Card ID</label>
+                <input type="text" id="admitCardId" placeholder="Admit Card ID">
+                <small>(as given on your admit card)</small>
+            </div>
+            
+            <div class="button-group">
+                <button class="submit-btn" onclick="showResult()">Submit</button>
+                <button class="reset-btn" onclick="resetForm()">Reset</button>
+            </div>
+        </div>
+        
+        <div class="disclaimer">
+            <p><strong>Disclaimer:</strong> Neither NIC nor CBSE is responsible for any inadvertent error that may have crept in the results being published on NET. The results published on net are for immediate information to the examinees. These cannot be treated as original mark sheets. Original mark sheets have been issued by the Board separately.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Designed, Developed and Hosted by National Informatics Centre</p>
+        </div>
+        
+        <!-- Result Section (hidden by default) -->
+        <div class="result-container" id="resultContainer">
+            <div class="result-header">
+                <h1>Central Board of Secondary Education</h1>
+                <h2>Senior School Examination (Class XII) 2025</h2>
+                <p><strong>Brought to you by National Informatics Centre</strong></p>
+            </div>
+            
+            <div class="student-info">
+                <p><strong>Roll No:</strong> <span id="displayRollNo"></span></p>
+                <p><strong>Candidate Name:</strong> Prince</p>
+                <p><strong>Mother's Name:</strong> Rakesh Kumari</p>
+                <p><strong>Father's Name:</strong> Anoj Kumar</p>
+                <p><strong>Date of Birth:</strong> <span id="displayDob"></span></p>
+                <p><strong>School's Name:</strong> Rawal Convent School</p>
+            </div>
+            
+            <table>
                 <thead>
                     <tr>
-                        <th>Subject</th>
-                        <th>Marks Obtained</th>
-                        <th>Maximum Marks</th>
+                        <th>SUB CODE</th>
+                        <th>SUB NAME</th>
+                        <th>THEORY</th>
+                        <th>LA/PRACTICAL</th>
+                        <th>TOTAL</th>
+                        <th>POSITIONAL GRADE</th>
                     </tr>
                 </thead>
-                <tbody id="marksBody">
+                <tbody>
                     <tr>
-                        <td>Physics</td>
-                        <td>59</td>
-                        <td>100</td>
+                        <td>041</td>
+                        <td>PHYSICS</td>
+                        <td>62</td>
+                        <td>20</td>
+                        <td>82</td>
+                        <td>B1</td>
                     </tr>
                     <tr>
-                        <td>Chemistry</td>
-                        <td>60</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>Mathematics</td>
-                        <td>57</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>English</td>
+                        <td>042</td>
+                        <td>CHEMISTRY</td>
+                        <td>58</td>
+                        <td>20</td>
                         <td>78</td>
-                        <td>100</td>
+                        <td>B1</td>
                     </tr>
                     <tr>
-                        <td>Physical Education</td>
-                        <td>55</td>
-                        <td>100</td>
+                        <td>041</td>
+                        <td>MATHEMATICS</td>
+                        <td>68</td>
+                        <td>20</td>
+                        <td>88</td>
+                        <td>A2</td>
                     </tr>
                     <tr>
-                        <td>Computer Science</td>
-                        <td>56</td>
-                        <td>100</td>
+                        <td>301</td>
+                        <td>ENGLISH CORE</td>
+                        <td>64</td>
+                        <td>20</td>
+                        <td>84</td>
+                        <td>A2</td>
+                    </tr>
+                    <tr>
+                        <td>048</td>
+                        <td>PHYSICAL EDUCATION</td>
+                        <td>52</td>
+                        <td>20</td>
+                        <td>72</td>
+                        <td>B2</td>
                     </tr>
                 </tbody>
             </table>
-
-            <div class="summary">
-                <p>Total Marks: 365/600</p>
-                <p>Percentage: 60.83%</p>
-                <p>Result: Pass</p>
+            
+            <h3>ADDITIONAL SUBJECT</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>SUB CODE</th>
+                        <th>SUB NAME</th>
+                        <th>THEORY</th>
+                        <th>LA/PRACTICAL</th>
+                        <th>TOTAL</th>
+                        <th>POSITIONAL GRADE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>083</td>
+                        <td>COMPUTER SCIENCE</td>
+                        <td>56</td>
+                        <td>20</td>
+                        <td>76</td>
+                        <td>B1</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="result-status">Result: PASS (Percentage: 74%)</div>
+            
+            <div class="disclaimer">
+                <p><strong>Disclaimer:</strong> Neither NIC nor CBSE is responsible for any inadvertent error that may have crept in the results being published on NET. The results published on net are for immediate information to the examinees. These cannot be treated as original mark sheets. Original mark sheets have been issued by the Board separately.</p>
             </div>
-
-            <button onclick="window.print()">Print Result</button>
+            
+            <div class="footer">
+                <p>Designed, Developed and Hosted by National Informatics Centre</p>
+            </div>
         </div>
     </div>
-
+    
     <script>
-        document.getElementById('resultForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const appNo = document.getElementById('applicationNo').value;
+        function showResult() {
+            const rollNumber = document.getElementById('rollNumber').value;
             const dob = document.getElementById('dob').value;
             
-            // Simple validation - in a real app, this would check against a database
-            if (appNo.trim() !== '' && dob.trim() !== '') {
-                // Display the result
-                document.getElementById('displayAppNo').textContent = appNo;
-                document.getElementById('displayDob').textContent = dob;
-                document.getElementById('resultContainer').style.display = 'block';
-                document.getElementById('error').style.display = 'none';
-                
-                // Scroll to result
-                document.getElementById('resultContainer').scrollIntoView({ behavior: 'smooth' });
-            } else {
-                document.getElementById('error').style.display = 'block';
+            if (!rollNumber || !dob) {
+                alert('Please enter Roll Number and Date of Birth');
+                return;
             }
-        });
+            
+            // Display the entered roll number and DOB in the result
+            document.getElementById('displayRollNo').textContent = rollNumber;
+            document.getElementById('displayDob').textContent = dob;
+            
+            // Show the result container
+            document.getElementById('resultContainer').style.display = 'block';
+            
+            // Scroll to the result
+            document.getElementById('resultContainer').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function resetForm() {
+            document.getElementById('rollNumber').value = '';
+            document.getElementById('schoolNumber').value = '';
+            document.getElementById('dob').value = '';
+            document.getElementById('admitCardId').value = '';
+            document.getElementById('resultContainer').style.display = 'none';
+        }
     </script>
 </body>
-                        </html>
+</html>
